@@ -1,0 +1,1 @@
+To launch all tests type in the terminal: mvn clean test
