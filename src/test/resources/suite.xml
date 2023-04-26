@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="githubTestSuite">
+    <test name="GithubLoginTest">
+        <classes>
+            <class name="CalendarTest">
+                <methods>
+                    <include name="calendarExtensionExists"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
