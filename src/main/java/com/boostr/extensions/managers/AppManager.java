@@ -1,7 +1,6 @@
 package com.boostr.extensions.managers;
 
 import com.boostr.extensions.helpers.*;
-import com.boostr.extensions.utils.PropertyLoader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,8 +23,8 @@ public class AppManager {
                 .addArguments("--disable-cache")
                 .addArguments("--lang=en")
                 .addExtensions(new File("src/test/resources/extensions/calendar.crx"))
-                .addArguments("--user-data-dir=c:\\Users\\dmytr\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\Default")
-                .setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+                .addArguments("--user-data-dir=c:\\Users\\dmytr\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 1\\Default");
+//                .setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
 
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);

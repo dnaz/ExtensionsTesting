@@ -11,11 +11,11 @@ public class CalendarTest  extends TestBase{
     @Test(groups = "calendar")
     @Description("Verify boostr login is present")
     public void calendarExtensionExists() {
-        app.getNavigationHelper().openLoginPage();
-        app.getUserHelper().inputEmail(PropertyLoader.loadProperty("google.login"));
-        app.getUserHelper().inputPassword(PropertyLoader.loadProperty("google.pass"));
+//        app.getNavigationHelper().openLoginPage();
+//        app.getUserHelper().inputEmail(PropertyLoader.loadProperty("google.login"));
+//        app.getUserHelper().inputPassword(PropertyLoader.loadProperty("google.pass"));
         app.getNavigationHelper().openCalendarPage();
         app.getNavigationHelper().createNewEvent();
-        Assert.assertEquals(app.getNavigationHelper().isBoostrLogoPresent(),true);
+        Assert.assertTrue(app.getNavigationHelper().isBoostrLogoPresent());
     }
 }
